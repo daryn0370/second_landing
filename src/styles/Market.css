@@ -1,0 +1,244 @@
+.market {
+  padding: 90px 40px 60px;
+  color: #e7e9f4;
+  font-family: 'Titillium Web Regular', 'Segoe UI', Arial, sans-serif;
+  width: 100%;
+  margin: 0;
+  background:
+    url('../pictures/graphic.png');
+  background-size: cover, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, right center;
+  position: relative;
+  overflow: hidden;
+}
+
+.market__content {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 520px auto;
+  gap: 24px 48px;
+  align-items: start;
+}
+
+.market__content {
+  display: grid;
+  grid-template-columns: 520px auto;
+  gap: 24px 48px;
+  align-items: start;
+}
+
+.market__coins {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.market__coin {
+  position: absolute;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.market__coin--ltc {
+  top: 28%;
+  right: 28%;
+}
+
+.market__coin--monero {
+  top: 66%;
+  right: 38%;
+}
+
+.market__coin--btc {
+  bottom: 8%;
+  right: 8%;
+}
+
+.market__right {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
+
+.market__left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.market__title {
+  display: block;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.1;
+  font-family: 'Titillium Web Light', 'Segoe UI', Arial, sans-serif;
+  color: #ffffff;
+}
+
+.market__subtitle {
+  display: block;
+  margin-top: 4px;
+  font-size: 50px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.1;
+  font-family: 'Titillium Web Light', 'Segoe UI', Arial, sans-serif;
+}
+
+.market__text {
+  display: block;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #b6b6dd;
+  font-family: 'Titillium Web Regular', 'Segoe UI', Arial, sans-serif;
+  max-width: 520px;
+}
+
+.market__text-line {
+  display: block;
+}
+
+.market__stats {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 54px;
+  margin-top: 20px;
+}
+
+.market__stats .stat-card:nth-child(2),
+.market__stats .stat-card:nth-child(4) {
+  margin-top: 18px;
+}
+
+.stat-card {
+  position: relative;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(86, 88, 110, 0.8), rgba(32, 34, 50, 0.85));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 280px;
+  height: 255px;
+}
+
+.stat-card--short {
+  height: 191px;
+}
+
+.stat-card__arrow {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #c56cff;
+  border-bottom: 2px solid #c56cff;
+  transform: rotate(135deg);
+}
+
+.stat-card__arrow--right {
+  left: auto;
+  right: 14px;
+  transform: rotate(-45deg);
+}
+
+.stat-card__body {
+  margin-top: 18px;
+  background: rgba(13, 15, 24, 0.72);
+  border-radius: 12px;
+  padding: 14px 16px;
+  height: 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.stat-card__label {
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  color: #cfd1e5;
+  font-family: 'Titillium Web Light', 'Segoe UI', Arial, sans-serif;
+}
+
+.stat-card__number {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  font-family: 'Titillium Web SemiBold', 'Segoe UI', Arial, sans-serif;
+  color: #ffffff;
+}
+
+.stat-card__currency {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.stat-card__value {
+  font-size: 42px;
+  line-height: 1;
+  font-family: 'Titillium Web SemiBold', 'Segoe UI', Arial, sans-serif;
+}
+
+.stat-card__value--accent {
+  font-size: 44px;
+  color: #cc77ff;
+}
+
+.stat-card__suffix {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #e7e9f4;
+}
+
+.stat-card__foot {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #d8d9e6;
+  font-family: 'Titillium Web Light', 'Segoe UI', Arial, sans-serif;
+}
+
+@media (max-width: 1100px) {
+  .market {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .market__content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .market__stats {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .market {
+    padding: 60px 16px;
+  }
+
+  .market__title,
+  .market__subtitle {
+    font-size: 36px;
+  }
+
+  .stat-card,
+  .stat-card--short {
+    width: 100%;
+  }
+}
